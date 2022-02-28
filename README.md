@@ -1,10 +1,13 @@
-# E-commerce Back End Starter Code
+# ORM-E-commerce-Back-End
 
 ## github repo:
-
+https://github.com/htariku/ORM-E-commerce-Back-End
 
 ## url link: 
+https://htariku.github.io/ORM-E-commerce-Back-End/
 
+## recording link: 
+https://youtu.be/NwPtj_z22gQ
  
    # Description
 GIVEN a functional Express.js API
@@ -35,6 +38,7 @@ THEN I am able to successfully create, update, and delete data in my database
  - MySQL2
  - Sequalize 
  - dontenv package 
+ - Starter code 
    
  
    # Usage 
@@ -47,7 +51,7 @@ THEN I am able to successfully create, update, and delete data in my database
    ![GitHub licence](https://img.shields.io/github/license/htariku/Professional-README-Generator)
  
    ## Contributors 
-   Contributors: Helen Tariku
+   Contributors: Helen Tariku, Xandromus(Xander Rapstine)
  
  
    # Questions 

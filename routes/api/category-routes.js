@@ -84,26 +84,46 @@ router.put("/:id", (req, res) => {
     });
 });
 
-router.delete("/:id", (req, res) => {
-  // delete a category by its `id` value
+// router.delete("/:id", (req, res) => {
+//   // delete a category by its `id` value
+//   Category.destroy({
+//     where: {
+//       id: req.params.id,
+//     },
+//   })
+//     .them((dbCategoryData) => {
+//       if (!dbCategoryData) {
+//         res
+//           .status(404)
+//           .json({ message: "Category was not found with this id" });
+//         return;
+//       }
+//       res.json(dbCategoryData);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
+
+router.delete('/:id', (req, res) => {
+  // delete on Category by its `id` value
   Category.destroy({
     where: {
-      id: req.params.id,
-    },
+        id: req.params.id
+    }
   })
-    .them((dbCategoryData) => {
-      if (!dbCategoryData) {
-        res
-          .status(404)
-          .json({ message: "Category was not found with this id" });
-        return;
-      }
-      res.json(dbCategoryData);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+    .then(dbCategoryData => {
+        if (!dbCategoryData) {
+            res.status(404).json({ message: 'Category could not be found using the id entered'});
+            return;
+        }
+        res.json(dbCategoryData);
+  })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+  });
 });
 
 module.exports = router;
